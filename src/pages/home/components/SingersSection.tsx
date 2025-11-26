@@ -2,6 +2,7 @@ import TeslaAnnouncement from "@/components/TeslaAnnouncement";
 import Carousel from "@/components/Carrousel";
 import SingersCard from "./SingersCard";
 import { Singer } from "@/services/singers";
+import Section from "./Section";
 
 export default function SingersSection({
   title,
@@ -9,7 +10,7 @@ export default function SingersSection({
   announcementPosition,
 }: PropsTypes) {
   return (
-    <section className="w-full px-20 my-10">
+    <Section>
       <h1 className="font-bold text-2xl mb-5">{title}</h1>
       <Carousel>
         {singers.map(({ name, image }, index) => {
@@ -22,7 +23,7 @@ export default function SingersSection({
           );
         })}
       </Carousel>
-    </section>
+    </Section>
   );
 }
 

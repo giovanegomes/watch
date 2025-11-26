@@ -2,6 +2,7 @@ import Image from "next/image";
 import Carousel from "../../../components/Carrousel";
 import AirpodsAnnouncement from "@/components/AirpodsAnnouncement";
 import { musicStylesService } from "@/services/music-styles";
+import Section from "../components/Section";
 
 const Card = ({
   musicStyle,
@@ -33,7 +34,7 @@ export default function MusicStyles() {
   const musicStyles = musicStylesService.fetch();
 
   return (
-    <section className="w-full px-20 my-10">
+    <Section>
       <div className="flex flex row">
         <div className="max-w-[180px]">
           <p className="font-bold text-lg mb-6">Festival for you</p>
@@ -58,6 +59,6 @@ export default function MusicStyles() {
           </div>
         </Carousel>
       </div>
-    </section>
+    </Section>
   );
 }
