@@ -1,6 +1,7 @@
 import SingersCard from "@/pages/home/components/SingersCard";
 import Announcement from "../../../components/Announcement";
 import Carousel from "../../../components/Carrousel";
+import { singersService } from "@/services/singers";
 
 const LINE_UP = [
   { name: "Iron Maiden", image: "iron-maiden.png" },
@@ -23,11 +24,13 @@ const LINE_UP = [
 ];
 
 export default function WatchAgain() {
+  const singers = singersService.fetch();
+
   return (
     <section className="w-full px-20 my-10">
       <h1 className="font-bold text-2xl mb-5">Watch Again</h1>
       <Carousel>
-        {LINE_UP.map(({ name, image }) => {
+        {singers.map(({ name, image }) => {
           if (name === "announcement")
             return <Announcement key="announcement" />;
 
