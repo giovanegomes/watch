@@ -10,7 +10,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className={`relative w-[208px] h-[208px] ${gradientClass} rounded-lg  hover:border-primary hover:border-3`}
+      className={`relative w-[208px] h-[208px] ${gradientClass} rounded-lg hover:border-primary hover:border-3`}
     >
       <Image
         className="absolute bottom-0 right-0 pointer-events-none"

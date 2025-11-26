@@ -1,3 +1,4 @@
+import SingersCard from "@/pages/home/components/SingersCard";
 import Announcement from "../../../components/Announcement";
 import Carousel from "../../../components/Carrousel";
 
@@ -30,18 +31,7 @@ export default function RockSingers() {
           if (name === "announcement")
             return <Announcement key="announcement" />;
 
-          return (
-            <div
-              key={name}
-              className="relative bg-white min-w-[208px] h-[288px] rounded-md bg-cover bg-center bg-no-repeat"
-              style={{ backgroundImage: `url('/images/${image}')` }}
-            >
-              <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-md" />
-              <h1 className="absolute w-full text-center mt-[220px] font-bold z-10">
-                {name}
-              </h1>
-            </div>
-          );
+          return <SingersCard key={name} name={name} backgroundImage={image} />;
         })}
       </Carousel>
     </section>

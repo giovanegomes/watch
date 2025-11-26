@@ -4,7 +4,7 @@ import { GoArrowRight } from "react-icons/go";
 
 export default function Announcement() {
   return (
-    <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden">
+    <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden hover:border-primary hover:border-3">
       <Image
         className="absolute pointer-events-none"
         src="/images/tesla-logo.svg"
