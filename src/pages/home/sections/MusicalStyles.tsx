@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Carousel from "../../../components/Carrousel";
+import AirpodsAnnouncement from "@/components/AirpodsAnnouncement";
 
 const Card = ({
   musicStyle,
@@ -37,8 +38,8 @@ const MUSIC_STYLES = [
     gradientClass: "bg-gradient-to-b from-[#06DE03] to-[#016500]",
   },
   {
-    musicStyle: "Funk",
-    gradientClass: "bg-gradient-to-b from-[#AF01CA] to-[#5E006C]",
+    musicStyle: "announcement",
+    gradientClass: "",
   },
   {
     musicStyle: "Jazz",
@@ -77,9 +78,13 @@ export default function MusicStyles() {
         </div>
         <Carousel>
           <div className="flex flex-row gap-6 ml-20">
-            {MUSIC_STYLES.map(({ musicStyle, gradientClass }) => (
-              <Card musicStyle={musicStyle} gradientClass={gradientClass} />
-            ))}
+            {MUSIC_STYLES.map(({ musicStyle, gradientClass }) => {
+              if (musicStyle === "announcement") return <AirpodsAnnouncement />;
+
+              return (
+                <Card musicStyle={musicStyle} gradientClass={gradientClass} />
+              );
+            })}
           </div>
         </Carousel>
       </div>

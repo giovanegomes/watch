@@ -1,4 +1,4 @@
-import Announcement from "@/components/Announcement";
+import TeslaAnnouncement from "@/components/TeslaAnnouncement";
 import Carousel from "@/components/Carrousel";
 import SingersCard from "./SingersCard";
 import { Singer } from "@/services/singers";
@@ -10,7 +10,7 @@ export default function SingersSection({ title, singers }: PropsTypes) {
       <Carousel>
         {singers.map(({ name, image }) => {
           if (name === "announcement")
-            return <Announcement key="announcement" />;
+            return <TeslaAnnouncement key="announcement" />;
 
           return <SingersCard key={name} name={name} backgroundImage={image} />;
         })}

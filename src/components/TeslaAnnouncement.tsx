@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { AiOutlineInfoCircle } from "react-icons/ai";
-import { GoArrowRight } from "react-icons/go";
+import AnnouncementBadge from "./AnnouncementBadge";
+import { IoMdArrowForward } from "react-icons/io";
 
-export default function Announcement() {
+export default function TeslaAnnouncement() {
   return (
     <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden hover:border-primary hover:border-3">
       <Image
@@ -19,10 +19,7 @@ export default function Announcement() {
         width={258}
         height={145}
       />
-      <div className="absolute flex flex-row items-center gap-2 bg-primary text-white px-2 py-1 rounded-full top-2 right-2 z-10">
-        <span className="font-light text-[10px]">Announcement</span>
-        <AiOutlineInfoCircle />
-      </div>
+      <AnnouncementBadge />
       <svg
         className="absolute ml-[220px] mt-[22px]"
         version="1.0"
@@ -92,7 +89,7 @@ export default function Announcement() {
         >
           learn more
         </span>
-        <GoArrowRight />
+        <IoMdArrowForward size={20} />
       </a>
     </div>
   );
