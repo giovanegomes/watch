@@ -4,7 +4,7 @@ import { GoArrowRight } from "react-icons/go";
 
 export default function Announcement() {
   return (
-    <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden  cursor-pointer">
+    <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden">
       <Image
         className="absolute "
         src="/images/tesla-logo.svg"
@@ -81,7 +81,11 @@ export default function Announcement() {
           height={40}
         />
       </div>
-      <div className="absolute flex flex-row items-center bg-danger text-white px-2 py-1 top-53 right-16 z-10">
+      <a
+        className="absolute flex flex-row items-center bg-danger text-white px-2 py-1 top-53 right-16 z-10 cursor-pointer"
+        href="https://www.tesla.com/model3-choose"
+        target="_blank"
+      >
         <span
           className="font-light text-xs underline"
           style={{ fontFamily: "Mulish" }}
@@ -89,7 +93,7 @@ export default function Announcement() {
           learn more
         </span>
         <GoArrowRight />
-      </div>
+      </a>
     </div>
   );
 }
