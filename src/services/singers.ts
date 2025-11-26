@@ -1,4 +1,4 @@
-type musicStyle =
+type MusicStyle =
   | "rock"
   | "pop"
   | "funk"
@@ -8,12 +8,17 @@ type musicStyle =
   | "trap"
   | "rap";
 
-const SINGERS = [
+export interface Singer {
+  name: string;
+  musicStyle: MusicStyle;
+  image: string;
+}
+
+const SINGERS: Singer[] = [
   { musicStyle: "rock", name: "Iron Maiden", image: "iron-maiden.png" },
   { musicStyle: "pop", name: "Alok", image: "alok.png" },
   { musicStyle: "pop", name: "Rita Ora", image: "rita-ora.png" },
   { musicStyle: "rock", name: "Dream Theater", image: "dream-theater.png" },
-  { musicStyle: "", name: "announcement", image: "" },
   { musicStyle: "pop", name: "Dua Lipa", image: "dua-lipa.png" },
   { musicStyle: "rock", name: "Måneskin", image: "maneskin.png" },
   { musicStyle: "rap", name: "Emicida", image: "emicida.png" },
@@ -33,7 +38,7 @@ class Singers {
     return SINGERS;
   }
 
-  fetchByStyles(style: musicStyle) {
+  fetchByStyles(style: MusicStyle) {
     return SINGERS.filter(({ musicStyle }) => musicStyle === style);
   }
 }
