@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Carousel from "../../../components/Carrousel";
 import AirpodsAnnouncement from "@/components/AirpodsAnnouncement";
+import { musicStylesService } from "@/services/music-styles";
 
 const Card = ({
   musicStyle,
@@ -28,42 +29,9 @@ const Card = ({
   );
 };
 
-const MUSIC_STYLES = [
-  {
-    musicStyle: "Rock",
-    gradientClass: "bg-gradient-to-b from-[#2433C0] to-[#4F60FF]",
-  },
-  {
-    musicStyle: "Pop",
-    gradientClass: "bg-gradient-to-b from-[#06DE03] to-[#016500]",
-  },
-  {
-    musicStyle: "announcement",
-    gradientClass: "",
-  },
-  {
-    musicStyle: "Jazz",
-    gradientClass: "bg-gradient-to-b from-[#FF6100] to-[#BF4900]",
-  },
-  {
-    musicStyle: "Samba",
-    gradientClass: "bg-gradient-to-b from-[#FF009A] to-[#A30062]",
-  },
-  {
-    musicStyle: "MPB",
-    gradientClass: "bg-gradient-to-b from-[#FFA801] to-[#7A5000]",
-  },
-  {
-    musicStyle: "Trap",
-    gradientClass: "bg-gradient-to-b from-[#00C0FF] to-[#006A8D]",
-  },
-  {
-    musicStyle: "Rap",
-    gradientClass: "bg-gradient-to-b from-[#FF0100] to-[#A80100]",
-  },
-];
-
 export default function MusicStyles() {
+  const musicStyles = musicStylesService.fetch();
+
   return (
     <section className="w-full px-20 my-10">
       <div className="flex flex row">
@@ -78,11 +46,13 @@ export default function MusicStyles() {
         </div>
         <Carousel>
           <div className="flex flex-row gap-6 ml-20">
-            {MUSIC_STYLES.map(({ musicStyle, gradientClass }) => {
-              if (musicStyle === "announcement") return <AirpodsAnnouncement />;
-
+            {musicStyles.map(({ musicStyle, gradientClass }, index) => {
               return (
-                <Card musicStyle={musicStyle} gradientClass={gradientClass} />
+                <div key={`item-${index}`} className="flex flex-row gap-6">
+                  {index === 2 && <AirpodsAnnouncement />}
+
+                  <Card musicStyle={musicStyle} gradientClass={gradientClass} />
+                </div>
               );
             })}
           </div>
