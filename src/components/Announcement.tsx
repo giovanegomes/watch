@@ -6,14 +6,14 @@ export default function Announcement() {
   return (
     <div className="relative bg-white min-w-[440px] h-[288px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden">
       <Image
-        className="absolute "
+        className="absolute pointer-events-none"
         src="/images/tesla-logo.svg"
         alt="Carro"
         width={104}
         height={135}
       />
       <Image
-        className="absolute mt-[124px]"
+        className="absolute mt-[124px] pointer-events-none"
         src="/images/carro.png"
         alt="Carro"
         width={258}
@@ -74,7 +74,7 @@ export default function Announcement() {
           </g>
         </svg>
         <Image
-          className="mt-3 ml-3"
+          className="mt-3 ml-3 pointer-events-none"
           src="/images/supercharger.png"
           alt="Carro"
           width={109}
