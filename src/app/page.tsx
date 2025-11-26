@@ -1,15 +1,7 @@
 "use client";
 
-import LineUp from "@/components/LineUp";
-import MusicStyles from "@/components/MusicalStyles";
-import Player from "@/components/Player";
+import HomePage from "@/pages/home";
 
 export default function Home() {
-  return (
-    <div className="w-full">
-      <Player />
-      <LineUp />
-      <MusicStyles />
-    </div>
-  );
+  return <HomePage />;
 }

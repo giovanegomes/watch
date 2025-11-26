@@ -1,5 +1,5 @@
-import Announcement from "./Announcement";
-import Carousel from "./Carrousel";
+import Announcement from "../../../components/Announcement";
+import Carousel from "../../../components/Carrousel";
 
 const LINE_UP = [
   { name: "Iron Maiden", image: "iron-maiden.png" },
@@ -21,10 +21,10 @@ const LINE_UP = [
   { name: "Ed Sheeran", image: "ed-sheeran.jpg" },
 ];
 
-export default function LineUp() {
+export default function WatchAgain() {
   return (
     <section className="w-full px-20 my-10">
-      <h1 className="font-bold text-2xl mb-5">Line Up</h1>
+      <h1 className="font-bold text-2xl mb-5">Watch Again</h1>
       <Carousel>
         {LINE_UP.map(({ name, image }) => {
           if (name === "announcement")

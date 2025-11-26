@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Carousel from "./Carrousel";
+import Carousel from "../../../components/Carrousel";
 
 const Card = ({
   musicStyle,
@@ -9,9 +9,11 @@ const Card = ({
   gradientClass: string;
 }) => {
   return (
-    <div className={`relative w-[208px] h-[208px] ${gradientClass} rounded-md`}>
+    <div
+      className={`relative w-[208px] h-[208px] ${gradientClass} rounded-lg  hover:border-primary hover:border-3`}
+    >
       <Image
-        className="absolute bottom-0 right-0"
+        className="absolute bottom-0 right-0 pointer-events-none"
         src="/images/vector.png"
         width={120}
         height={72}
