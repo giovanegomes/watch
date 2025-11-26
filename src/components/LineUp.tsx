@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
 import Announcement from "./Announcement";
+import Carousel from "./Carrousel";
 
 const LINE_UP = [
   { name: "Iron Maiden", image: "iron-maiden.png" },
@@ -22,62 +22,10 @@ const LINE_UP = [
 ];
 
 export default function LineUp() {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-
-  const handleMouseDown = (event: React.MouseEvent) => {
-    if (!containerRef.current) return;
-
-    setIsDragging(true);
-    setStartX(event.pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleMouseMove = (event: React.MouseEvent) => {
-    if (!containerRef.current || !isDragging) return;
-
-    event.preventDefault();
-    const x = event.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const stopDragging = () => setIsDragging(false);
-
-  const handleTouchStart = (event: React.TouchEvent) => {
-    if (!containerRef.current) return;
-
-    setIsDragging(true);
-    setStartX(event.touches[0].pageX - containerRef.current.offsetLeft);
-    setScrollLeft(containerRef.current.scrollLeft);
-  };
-
-  const handleTouchMove = (event: React.TouchEvent) => {
-    if (!containerRef.current || !isDragging) return;
-
-    const x = event.touches[0].pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.2;
-    containerRef.current.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleTouchEnd = () => setIsDragging(false);
-
   return (
-    <section className="w-full px-20 my-10 ">
+    <section className="w-full px-20 my-10">
       <h1 className="font-bold text-2xl mb-5">Line Up</h1>
-      <div
-        ref={containerRef}
-        className="flex flex-row gap-6 overflow-x-auto scrollbar-hide"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={stopDragging}
-        onMouseUp={stopDragging}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
+      <Carousel>
         {LINE_UP.map(({ name, image }) => {
           if (name === "announcement")
             return <Announcement key="announcement" />;
@@ -95,7 +43,7 @@ export default function LineUp() {
             </div>
           );
         })}
-      </div>
+      </Carousel>
     </section>
   );
 }

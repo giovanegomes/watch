@@ -1,6 +1,7 @@
 "use client";
 
 import LineUp from "@/components/LineUp";
+import MusicStyles from "@/components/MusicalStyles";
 import Player from "@/components/Player";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
     <div className="w-full">
       <Player />
       <LineUp />
+      <MusicStyles />
     </div>
   );
 }
