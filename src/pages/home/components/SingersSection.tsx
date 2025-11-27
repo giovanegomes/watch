@@ -10,8 +10,7 @@ export default function SingersSection({
   announcementPosition,
 }: PropsTypes) {
   return (
-    <Section>
-      <h1 className="font-bold text-2xl mb-5">{title}</h1>
+    <Section title={title}>
       <Carousel>
         {singers.map(({ name, image }, index) => {
           return (

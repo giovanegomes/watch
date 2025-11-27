@@ -7,6 +7,7 @@ import RockSingers from "@/pages/home/sections/RockSingers";
 import WatchAgain from "@/pages/home/sections/WatchAgain";
 import YesterdayShows from "@/pages/home/sections/YesterdayShows";
 import Banner from "./sections/Banner";
+import ExclusiveContent from "./sections/ExclusiveContent";
 
 export default function HomePage() {
   return (
@@ -16,6 +17,7 @@ export default function HomePage() {
       <MusicStyles />
       <Banner />
       <YesterdayShows />
+      <ExclusiveContent />
       <RockSingers />
       <Banner />
       <WatchAgain />
