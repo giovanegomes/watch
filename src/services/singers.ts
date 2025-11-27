@@ -28,7 +28,7 @@ const SINGERS: Singer[] = [
   { musicStyle: "pop", name: "Marshmello", image: "marshmello.png" },
   { musicStyle: "mpb", name: "Djavan", image: "djavan.png" },
   { musicStyle: "rock", name: "Offspring", image: "offspring.png" },
-  { musicStyle: "pop", name: "Avril Lavigne", image: "avril-lavigne.png" },
+  { musicStyle: "rock", name: "Avril Lavigne", image: "avril-lavigne.png" },
   { musicStyle: "rock", name: "Black Pantera", image: "black-pantera.png" },
   { musicStyle: "pop", name: "Ed Sheeran", image: "ed-sheeran.jpg" },
 ];
