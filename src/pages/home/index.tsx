@@ -6,6 +6,7 @@ import Player from "@/pages/home/sections/Player";
 import RockSingers from "@/pages/home/sections/RockSingers";
 import WatchAgain from "@/pages/home/sections/WatchAgain";
 import YesterdayShows from "@/pages/home/sections/YesterdayShows";
+import Banner from "./sections/Banner";
 
 export default function HomePage() {
   return (
@@ -13,8 +14,10 @@ export default function HomePage() {
       <Player />
       <LineUp />
       <MusicStyles />
+      <Banner />
       <YesterdayShows />
       <RockSingers />
+      <Banner />
       <WatchAgain />
     </div>
   );
