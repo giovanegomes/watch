@@ -21,7 +21,7 @@ const Line = ({
 
 export default function AirpodsAnnouncement() {
   return (
-    <div className="relative flex flex-row min-w-100 bg-black rounded-lg w-[440px] h-[208px] hover:border-primary hover:border-3">
+    <div className="relative flex flex-row min-w-100 bg-black rounded-lg w-[90vw] max-w-[440px] h-[208px] hover:border-primary hover:border-3">
       <AnnouncementBadge />
       <div className="flex-1">
         <Image

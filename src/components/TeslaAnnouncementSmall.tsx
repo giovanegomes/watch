@@ -4,7 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function TeslaAnnouncementSmall() {
   return (
-    <div className="relative bg-white min-w-[440px] h-[208px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden hover:border-primary hover:border-3">
+    <div className="relative bg-white w-[90vw] max-w-[440px] h-[208px] rounded-md bg-cover bg-gradient-to-b from-[#343434] via-[#343434] to-[#1C1C1C] overflow-hidden hover:border-primary hover:border-3">
       <Image
         className="absolute pointer-events-none mt-5 ml-3"
         src="/images/tesla-logo.svg"

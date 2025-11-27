@@ -4,7 +4,7 @@ import { IoMdArrowForward } from "react-icons/io";
 
 export default function NikeAnnouncement() {
   return (
-    <div className="relative flex flex-row min-w-100 bg-[#F6F6F6] rounded-lg w-[440px] h-[208px] hover:border-primary hover:border-3">
+    <div className="relative flex flex-row bg-[#F6F6F6] rounded-lg w-[90vw] max-w-[440px] h-[208px] hover:border-primary hover:border-3">
       <AnnouncementBadge />
       <div className="flex-1">
         <Image

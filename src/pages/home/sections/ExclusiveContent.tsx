@@ -16,7 +16,7 @@ const Card = ({
 }) => {
   return (
     <div
-      className="relative bg-white min-w-[440px] h-[208px] rounded-md bg-cover bg-center bg-no-repeat hover:border-primary hover:border-3"
+      className="relative bg-white w-[90vw] max-w-[440px] h-[208px] rounded-md bg-cover bg-center bg-no-repeat hover:border-primary hover:border-3"
       style={{ backgroundImage: `url('/images/${backgroundImage}')` }}
     >
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/90 via-black/40 to-transparent rounded-md" />

@@ -35,7 +35,7 @@ export default function MusicStyles() {
 
   return (
     <Section>
-      <div className="flex flex row">
+      <div className="flex flex-col md:flex-row">
         <div className="max-w-[180px]">
           <p className="font-bold text-lg mb-6">Festival for you</p>
           <p className="mb-6">
@@ -46,7 +46,7 @@ export default function MusicStyles() {
           </button>
         </div>
         <Carousel>
-          <div className="flex flex-row gap-6 ml-20">
+          <div className="flex flex-row gap-6 mt-6 md:mt-0">
             {musicStyles.map(({ musicStyle, gradientClass }, index) => {
               return (
                 <div key={`item-${index}`} className="flex flex-row gap-6">

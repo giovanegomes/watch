@@ -5,7 +5,7 @@ import Carousel from "@/components/Carrousel";
 const Card = ({ stage, image }: { stage: string; image: string }) => {
   return (
     <div
-      className={`flex flex-col bg-[#3D3D3F] w-[440px] h-[288px] rounded-lg hover:border-primary hover:border-3`}
+      className={`flex flex-col bg-[#3D3D3F] w-[90vw] max-w-[440px] h-[288px] rounded-lg hover:border-primary hover:border-3`}
     >
       <div
         className="h-[208px] rounded-t-md bg-cover bg-center bg-no-repeat "
