@@ -9,6 +9,7 @@ import YesterdayShows from "@/pages/home/sections/YesterdayShows";
 import Banner from "./sections/Banner";
 import ExclusiveContent from "./sections/ExclusiveContent";
 import Footer from "@/components/Footer";
+import InLive from "./sections/InLive";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <LineUp />
       <MusicStyles />
       <Banner />
+      <InLive />
       <YesterdayShows />
       <ExclusiveContent />
       <RockSingers />
