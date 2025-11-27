@@ -9,6 +9,7 @@ export default function SingersSection({
   singers,
   announcementPosition,
 }: PropsTypes) {
+  if (!singers?.length) return;
   return (
     <Section title={title}>
       <Carousel>
